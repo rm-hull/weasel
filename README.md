@@ -2,7 +2,7 @@
 
 Demonstrations of the process that drives evolutionary systems.
 
-## The Blind Watchmaker
+### The Blind Watchmaker
 
 In his 1986 book _The Blind Watchmaker_, Richard Dawkins ponders the infinite
 monkey problem: The scenario is staged to produce a string of gibberish
@@ -21,7 +21,7 @@ generations.
 
 http://programming-enchiladas.destructuring-bind.org/rm-hull/8347c8fd72570d7a8b32
 
-## Travelling Salesman
+### Travelling Salesman
 
 The TSP ('travelling salesman problem') is a popular demonstration of an
 NP-hard problem in Computer Science: Given a list of cities and the distances
@@ -34,13 +34,13 @@ used to evolve the next generation.
 
 http://programming-enchiladas.destructuring-bind.org/rm-hull/106becfb921c78dea949
 
-## Mona Lisa
+### Mona Lisa
 
 Roger Johansson's [blog](https://rogeralsing.com/2008/12/07/genetic-programming-evolution-of-mona-lisa/)
 demonstrates how genetic programming can conjure an image of the Mona Lisa. This
 project also aims to acheive the same, but programmed in clojure.
 
-### Attribution
+#### Attribution
 
 * Sydney Opera House - http://cameralabs.org/4289-nevoobrazimye-pejzazhi-avstralii
 
