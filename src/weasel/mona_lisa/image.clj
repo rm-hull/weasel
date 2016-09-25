@@ -36,8 +36,8 @@
       (.setColor rgba)
       (.fill polygon))))
 
-(defn draw [dna]
-  (let [img (create-image 256 256)
+(defn draw [dna [width height]]
+  (let [img (create-image width height)
         g2d (create-graphics img)]
     (doseq [gene dna]
       (draw-gene g2d gene))
