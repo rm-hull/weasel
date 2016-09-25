@@ -14,7 +14,9 @@
       (.setRenderingHint RenderingHints/KEY_ANTIALIASING RenderingHints/VALUE_ANTIALIAS_ON)
       (.setRenderingHint RenderingHints/KEY_RENDERING RenderingHints/VALUE_RENDER_QUALITY)
       (.setRenderingHint RenderingHints/KEY_INTERPOLATION RenderingHints/VALUE_INTERPOLATION_BICUBIC)
-      (.setRenderingHint RenderingHints/KEY_ALPHA_INTERPOLATION RenderingHints/VALUE_ALPHA_INTERPOLATION_QUALITY))
+      (.setRenderingHint RenderingHints/KEY_ALPHA_INTERPOLATION RenderingHints/VALUE_ALPHA_INTERPOLATION_QUALITY)
+      (.setBackground Color/BLACK)
+      (.clearRect 0 0 (.getWidth img) (.getHeight img)))
     g2d))
 (defn- polygon [points]
   (let [polygon (Polygon.)]
