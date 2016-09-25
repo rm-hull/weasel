@@ -76,5 +76,5 @@
 (defn read-img [filename]
   (ImageIO/read (clojure.java.io/file filename)))
 
-(defn write-png [^BufferedImage image filename]
-  (ImageIO/write image "png" (clojure.java.io/file filename)))
+(defn write-png [^BufferedImage img filename]
+  (ImageIO/write img "png" (clojure.java.io/file filename)))
