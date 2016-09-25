@@ -1,4 +1,4 @@
-(ns weasel.cumulative-selection)
+(ns weasel.blind-watchmaker)
 
 (def dictionary "ABCDEFGHIJKLMNOPQRSTUVWXYZ ")
 
