@@ -18,28 +18,29 @@
       (.setBackground Color/BLACK)
       (.clearRect 0 0 (.getWidth img) (.getHeight img)))
     g2d))
-(defn- polygon [points]
+
+(defn- ->polygon [points]
   (let [polygon (Polygon.)]
-    (doseq [[x y] (partition 2 points)]
+    (doseq [[x y] points]
       (.addPoint polygon x y))
     polygon))
 
-(defn- color [r g b a]
+(defn- ->color [[r g b a :as rgba]]
   (Color. (int r) (int g) (int b) (int a)))
 
-(defn- draw-polygon [^Graphics2D g2d poly]
-  (let [[r g b a & points] poly
-        polygon (polygon points)
-        color (color r g b a)]
+(defn- draw-gene [^Graphics2D g2d gene]
+  (let [{:keys [color points]} gene
+        polygon (->polygon points)
+        rgba (->color color)]
     (doto g2d
-      (.setColor color)
+      (.setColor rgba)
       (.fill polygon))))
 
-(defn draw [gene n]
+(defn draw [dna]
   (let [img (create-image 256 256)
         g2d (create-graphics img)]
-    (doseq [poly (partition (/ (count gene) n) gene)]
-      (draw-polygon g2d poly))
+    (doseq [gene dna]
+      (draw-gene g2d gene))
     (.dispose g2d)
     img))
 
