@@ -40,6 +40,12 @@ Roger Johansson's [blog](https://rogeralsing.com/2008/12/07/genetic-programming-
 demonstrates how genetic programming can conjure an image of the Mona Lisa. This
 project also aims to acheive the same, but programmed in clojure.
 
+#### Notes
+
+Use [ffmpeg](https://trac.ffmpeg.org/wiki/Create%20a%20video%20slideshow%20from%20images) to animate png files:
+
+    $ ffmpeg -framerate 5 -i %05d.png -c:v libx264 -r 5 -pix_fmt yuv420p out2.mp4
+
 #### Attribution
 
 * Sydney Opera House - http://cameralabs.org/4289-nevoobrazimye-pejzazhi-avstralii
