@@ -72,6 +72,8 @@
       (.dispose g2d)
       resized)))
 
+(defn dimensions [^BufferedImage img]
+  [(.getWidth img) (.getHeight img)])
 
 (defn read-img [filename]
   (ImageIO/read (clojure.java.io/file filename)))
